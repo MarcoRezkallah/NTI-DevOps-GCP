@@ -2,4 +2,4 @@
 
 mkdir -p log
 
-terraform destroy 2>&1 | tee log/destroy.log
+terraform destroy -auto-approve 2>&1 | tee log/destroy.log
