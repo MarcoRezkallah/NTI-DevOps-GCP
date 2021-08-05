@@ -6,7 +6,7 @@ resource "google_compute_instance" "private" {
     initialize_params {
       image = "ubuntu-2004-lts"
       type  = "pd-standard"
-      size = 10
+      size  = 10
     }
 
   }
@@ -14,9 +14,6 @@ resource "google_compute_instance" "private" {
   network_interface {
     subnetwork = var.private_subnet_id
 
-    access_config {
-      // Ephemeral IP
-    }
   }
 
 }
