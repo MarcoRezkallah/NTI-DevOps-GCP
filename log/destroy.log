@@ -1,15 +1,15 @@
-[0m[1mmodule.storage.google_storage_bucket.main_bucket: Refreshing state... [id=marco-rezkallah-main-bucket][0m
-[0m[1mmodule.network.google_compute_network.vpc_network: Refreshing state... [id=projects/silver-axon-321114/global/networks/vpc-network][0m
 [0m[1mmodule.security.google_service_account.compute-admin: Refreshing state... [id=projects/silver-axon-321114/serviceAccounts/computeadmin@silver-axon-321114.iam.gserviceaccount.com][0m
+[0m[1mmodule.storage.google_storage_bucket.main_bucket: Refreshing state... [id=marco-rezkallah-main-bucket][0m
 [0m[1mmodule.storage.google_sql_database_instance.db_instance: Refreshing state... [id=main-db][0m
-[0m[1mmodule.network.google_compute_subnetwork.private: Refreshing state... [id=projects/silver-axon-321114/regions/us-central1/subnetworks/private][0m
+[0m[1mmodule.network.google_compute_network.vpc_network: Refreshing state... [id=projects/silver-axon-321114/global/networks/vpc-network][0m
 [0m[1mmodule.network.google_compute_subnetwork.public: Refreshing state... [id=projects/silver-axon-321114/regions/europe-west1/subnetworks/public][0m
+[0m[1mmodule.network.google_compute_subnetwork.private: Refreshing state... [id=projects/silver-axon-321114/regions/us-central1/subnetworks/private][0m
 [0m[1mmodule.security.google_compute_firewall.all-vpc-fw: Refreshing state... [id=projects/silver-axon-321114/global/firewalls/all-vpc-fw][0m
-[0m[1mmodule.storage.google_sql_database.app_db: Refreshing state... [id=projects/silver-axon-321114/instances/main-db/databases/application-database][0m
 [0m[1mmodule.security.google_project_iam_member.compute-admin-membership: Refreshing state... [id=silver-axon-321114/roles/compute.instanceAdmin.v1/serviceAccount:computeadmin@silver-axon-321114.iam.gserviceaccount.com][0m
 [0m[1mmodule.compute.google_compute_instance.private: Refreshing state... [id=projects/silver-axon-321114/zones/us-central1-b/instances/private][0m
 [0m[1mmodule.compute.google_compute_instance.public: Refreshing state... [id=projects/silver-axon-321114/zones/europe-west1-b/instances/public][0m
 [0m[1mmodule.k8s.google_container_cluster.main_cluster: Refreshing state... [id=projects/silver-axon-321114/locations/europe-west1/clusters/main-cluster][0m
+[0m[1mmodule.storage.google_sql_database.app_db: Refreshing state... [id=projects/silver-axon-321114/instances/main-db/databases/application-database][0m
 [0m
 [1m[36mNote:[0m[1m Objects have changed outside of Terraform[0m
 
@@ -21,7 +21,7 @@ last "terraform apply":
         [1m[0mid[0m[0m                          = "projects/silver-axon-321114/locations/europe-west1/clusters/main-cluster"
         [1m[0mname[0m[0m                        = "main-cluster"
       [32m+[0m [0m[1m[0mresource_labels[0m[0m             = {}
-        [90m# (25 unchanged attributes hidden)[0m[0m
+        [90m# (24 unchanged attributes hidden)[0m[0m
 
 
 
@@ -32,24 +32,7 @@ last "terraform apply":
 
 
 
-
-        [90m# (11 unchanged blocks hidden)[0m[0m
-    }
-[1m  # module.network.google_compute_subnetwork.public[0m has been changed[0m[0m
-[0m  [33m~[0m[0m resource "google_compute_subnetwork" "public" {
-        [1m[0mid[0m[0m                         = "projects/silver-axon-321114/regions/europe-west1/subnetworks/public"
-        [1m[0mname[0m[0m                       = "public"
-      [33m~[0m [0m[1m[0msecondary_ip_range[0m[0m         = [
-          [32m+[0m [0m{
-              [32m+[0m [0mip_cidr_range = "10.96.0.0/20"
-              [32m+[0m [0mrange_name    = "gke-main-cluster-services-6653be4f"
-            },
-          [32m+[0m [0m{
-              [32m+[0m [0mip_cidr_range = "10.92.0.0/14"
-              [32m+[0m [0mrange_name    = "gke-main-cluster-pods-6653be4f"
-            },
-        ]
-        [90m# (9 unchanged attributes hidden)[0m[0m
+        [90m# (10 unchanged blocks hidden)[0m[0m
     }
 [1m  # module.security.google_compute_firewall.all-vpc-fw[0m has been changed[0m[0m
 [0m  [33m~[0m[0m resource "google_compute_firewall" "all-vpc-fw" {
@@ -125,7 +108,7 @@ Terraform will perform the following actions:
       [31m-[0m [0m[1m[0menable_display[0m[0m       = false [90m->[0m [0m[90mnull[0m[0m
       [31m-[0m [0m[1m[0mguest_accelerator[0m[0m    = [] [90m->[0m [0m[90mnull[0m[0m
       [31m-[0m [0m[1m[0mid[0m[0m                   = "projects/silver-axon-321114/zones/us-central1-b/instances/private" [90m->[0m [0m[90mnull[0m[0m
-      [31m-[0m [0m[1m[0minstance_id[0m[0m          = "5480958638956828321" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0minstance_id[0m[0m          = "9107152986704007731" [90m->[0m [0m[90mnull[0m[0m
       [31m-[0m [0m[1m[0mlabel_fingerprint[0m[0m    = "42WmSpB8rSM=" [90m->[0m [0m[90mnull[0m[0m
       [31m-[0m [0m[1m[0mlabels[0m[0m               = {} [90m->[0m [0m[90mnull[0m[0m
       [31m-[0m [0m[1m[0mmachine_type[0m[0m         = "e2-small" [90m->[0m [0m[90mnull[0m[0m
@@ -186,7 +169,7 @@ Terraform will perform the following actions:
       [31m-[0m [0m[1m[0menable_display[0m[0m       = false [90m->[0m [0m[90mnull[0m[0m
       [31m-[0m [0m[1m[0mguest_accelerator[0m[0m    = [] [90m->[0m [0m[90mnull[0m[0m
       [31m-[0m [0m[1m[0mid[0m[0m                   = "projects/silver-axon-321114/zones/europe-west1-b/instances/public" [90m->[0m [0m[90mnull[0m[0m
-      [31m-[0m [0m[1m[0minstance_id[0m[0m          = "7719548241341142689" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0minstance_id[0m[0m          = "6544944062491873842" [90m->[0m [0m[90mnull[0m[0m
       [31m-[0m [0m[1m[0mlabel_fingerprint[0m[0m    = "42WmSpB8rSM=" [90m->[0m [0m[90mnull[0m[0m
       [31m-[0m [0m[1m[0mlabels[0m[0m               = {} [90m->[0m [0m[90mnull[0m[0m
       [31m-[0m [0m[1m[0mmachine_type[0m[0m         = "e2-small" [90m->[0m [0m[90mnull[0m[0m
@@ -246,7 +229,6 @@ Terraform will perform the following actions:
 [1m  # module.k8s.google_container_cluster.main_cluster[0m will be [1m[31mdestroyed[0m[0m
 [0m  [31m-[0m[0m resource "google_container_cluster" "main_cluster" {
       [31m-[0m [0m[1m[0mcluster_ipv4_cidr[0m[0m           = "10.92.0.0/14" [90m->[0m [0m[90mnull[0m[0m
-      [31m-[0m [0m[1m[0mdefault_max_pods_per_node[0m[0m   = 110 [90m->[0m [0m[90mnull[0m[0m
       [31m-[0m [0m[1m[0menable_autopilot[0m[0m            = false [90m->[0m [0m[90mnull[0m[0m
       [31m-[0m [0m[1m[0menable_binary_authorization[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
       [31m-[0m [0m[1m[0menable_intranode_visibility[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
@@ -254,13 +236,13 @@ Terraform will perform the following actions:
       [31m-[0m [0m[1m[0menable_legacy_abac[0m[0m          = false [90m->[0m [0m[90mnull[0m[0m
       [31m-[0m [0m[1m[0menable_shielded_nodes[0m[0m       = false [90m->[0m [0m[90mnull[0m[0m
       [31m-[0m [0m[1m[0menable_tpu[0m[0m                  = false [90m->[0m [0m[90mnull[0m[0m
-      [31m-[0m [0m[1m[0mendpoint[0m[0m                    = "34.76.144.7" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mendpoint[0m[0m                    = "35.205.124.163" [90m->[0m [0m[90mnull[0m[0m
       [31m-[0m [0m[1m[0mid[0m[0m                          = "projects/silver-axon-321114/locations/europe-west1/clusters/main-cluster" [90m->[0m [0m[90mnull[0m[0m
       [31m-[0m [0m[1m[0minitial_node_count[0m[0m          = 2 [90m->[0m [0m[90mnull[0m[0m
       [31m-[0m [0m[1m[0minstance_group_urls[0m[0m         = [
-          [31m-[0m [0m"https://www.googleapis.com/compute/v1/projects/silver-axon-321114/zones/europe-west1-c/instanceGroups/gke-main-cluster-default-pool-26f55156-grp",
-          [31m-[0m [0m"https://www.googleapis.com/compute/v1/projects/silver-axon-321114/zones/europe-west1-b/instanceGroups/gke-main-cluster-default-pool-1558845d-grp",
-          [31m-[0m [0m"https://www.googleapis.com/compute/v1/projects/silver-axon-321114/zones/europe-west1-d/instanceGroups/gke-main-cluster-default-pool-c1ed99a3-grp",
+          [31m-[0m [0m"https://www.googleapis.com/compute/v1/projects/silver-axon-321114/zones/europe-west1-d/instanceGroups/gke-main-cluster-default-pool-a38be44b-grp",
+          [31m-[0m [0m"https://www.googleapis.com/compute/v1/projects/silver-axon-321114/zones/europe-west1-b/instanceGroups/gke-main-cluster-default-pool-dcafd9a7-grp",
+          [31m-[0m [0m"https://www.googleapis.com/compute/v1/projects/silver-axon-321114/zones/europe-west1-c/instanceGroups/gke-main-cluster-default-pool-3ebcf329-grp",
         ] [90m->[0m [0m[90mnull[0m[0m
       [31m-[0m [0m[1m[0mlabel_fingerprint[0m[0m           = "a9dc16a7" [90m->[0m [0m[90mnull[0m[0m
       [31m-[0m [0m[1m[0mlocation[0m[0m                    = "europe-west1" [90m->[0m [0m[90mnull[0m[0m
@@ -269,7 +251,7 @@ Terraform will perform the following actions:
       [31m-[0m [0m[1m[0mmonitoring_service[0m[0m          = "monitoring.googleapis.com/kubernetes" [90m->[0m [0m[90mnull[0m[0m
       [31m-[0m [0m[1m[0mname[0m[0m                        = "main-cluster" [90m->[0m [0m[90mnull[0m[0m
       [31m-[0m [0m[1m[0mnetwork[0m[0m                     = "projects/silver-axon-321114/global/networks/vpc-network" [90m->[0m [0m[90mnull[0m[0m
-      [31m-[0m [0m[1m[0mnetworking_mode[0m[0m             = "VPC_NATIVE" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mnetworking_mode[0m[0m             = "ROUTES" [90m->[0m [0m[90mnull[0m[0m
       [31m-[0m [0m[1m[0mnode_locations[0m[0m              = [
           [31m-[0m [0m"europe-west1-b",
           [31m-[0m [0m"europe-west1-c",
@@ -279,7 +261,7 @@ Terraform will perform the following actions:
       [31m-[0m [0m[1m[0mproject[0m[0m                     = "silver-axon-321114" [90m->[0m [0m[90mnull[0m[0m
       [31m-[0m [0m[1m[0mresource_labels[0m[0m             = {} [90m->[0m [0m[90mnull[0m[0m
       [31m-[0m [0m[1m[0mself_link[0m[0m                   = "https://container.googleapis.com/v1beta1/projects/silver-axon-321114/locations/europe-west1/clusters/main-cluster" [90m->[0m [0m[90mnull[0m[0m
-      [31m-[0m [0m[1m[0mservices_ipv4_cidr[0m[0m          = "10.96.0.0/20" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mservices_ipv4_cidr[0m[0m          = "10.95.240.0/20" [90m->[0m [0m[90mnull[0m[0m
       [31m-[0m [0m[1m[0msubnetwork[0m[0m                  = "projects/silver-axon-321114/regions/europe-west1/subnetworks/public" [90m->[0m [0m[90mnull[0m[0m
 
       [31m-[0m [0maddons_config {
@@ -301,15 +283,8 @@ Terraform will perform the following actions:
           [31m-[0m [0m[1m[0mdisabled[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
         }
 
-      [31m-[0m [0mip_allocation_policy {
-          [31m-[0m [0m[1m[0mcluster_ipv4_cidr_block[0m[0m       = "10.92.0.0/14" [90m->[0m [0m[90mnull[0m[0m
-          [31m-[0m [0m[1m[0mcluster_secondary_range_name[0m[0m  = "gke-main-cluster-pods-6653be4f" [90m->[0m [0m[90mnull[0m[0m
-          [31m-[0m [0m[1m[0mservices_ipv4_cidr_block[0m[0m      = "10.96.0.0/20" [90m->[0m [0m[90mnull[0m[0m
-          [31m-[0m [0m[1m[0mservices_secondary_range_name[0m[0m = "gke-main-cluster-services-6653be4f" [90m->[0m [0m[90mnull[0m[0m
-        }
-
       [31m-[0m [0mmaster_auth {
-          [31m-[0m [0m[1m[0mcluster_ca_certificate[0m[0m = "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURLekNDQWhPZ0F3SUJBZ0lSQU5TUDJ3UUY0enRQdlhsUEsvN0JFa0V3RFFZSktvWklodmNOQVFFTEJRQXcKTHpFdE1Dc0dBMVVFQXhNa1lXSmtOak0zTmpjdFlqUTNPQzAwTVRBMkxXRmtPRE10TXpZd09HSmpOamc0TW1SaQpNQjRYRFRJeE1EZ3dOakEyTkRReE0xb1hEVEkyTURnd05UQTNORFF4TTFvd0x6RXRNQ3NHQTFVRUF4TWtZV0prCk5qTTNOamN0WWpRM09DMDBNVEEyTFdGa09ETXRNell3T0dKak5qZzRNbVJpTUlJQklqQU5CZ2txaGtpRzl3MEIKQVFFRkFBT0NBUThBTUlJQkNnS0NBUUVBb0hnTXNVOEsvaW5WVnJTMUdqNmpNbm8xTE9NZTVVM0cwT3NtYjJ3RQp2QlJGYVh6YXFvNW1IZkNKeEpSbUdBdGdwNUZKUXh2WjEzRC9HUkZUck16WHA2ZkwrazRtWFRxbFU5UWM0UUxRCm5VaFBNcGFzZzJiUnZNcTg3NmlzKyttNUovakRCaTFWeCs2VUh3aUhoOVU2WVBmNVRpMENyUDBkUXpoNXhNekkKdDBuN2QwT1FEQWxuSWdINjY1RG9Ha3hmSmI1L2Q1YXZ3YTltRDJocGtEeDlkcXFybVFIWTdidHhyUUhkUkVNMQpNOVd1K0FZT3g2ajVVYVdjZFBnUEk3Mjg0L3FBK2hyRlY0bWQzb0JvR3F3QUFzMGtJUDJhYU4vKytDREhkaEJZCis3VVpKKzQyOXRJTTJlRU5XL2hKS1MwYmlRVFZuR2h2T0JYay9wdTJra0duRndJREFRQUJvMEl3UURBT0JnTlYKSFE4QkFmOEVCQU1DQWdRd0R3WURWUjBUQVFIL0JBVXdBd0VCL3pBZEJnTlZIUTRFRmdRVWJRdm5iQlYzSklWZgpLRXFFWUQxOU1IM2xkYmd3RFFZSktvWklodmNOQVFFTEJRQURnZ0VCQUVOT1Y0QzBldnBNN3Z3aDhxZkVRS1IyCi85M2pNL1Npb3NvQzh3VWJxeUcvdGx2WDdqREpxYmpFeTNIbHprNWJlZFgwS2xxT0ZEZ0tRWnN0SEZRY3ZWRk0KMlZIK2VsZ1VFQkhkNFlvZWU0MmFVMFllZCs4UnN3UkhCS3Jhb1ZhdjMraFJEWWN3TW5MSkVYRkJvNHFrSEVjUQpiejlpSFBlNEhNZGpnVlBvYWRKbjYzY1NKMWQ2VSttVmJLQmhxeURzbVBubDRNY0dsZHIwYVI3QzBzKzBDVTliCklJTFhGMGduZXNrcmZvdjF3bVlFNmI5OXpVN1dKcE5RdkZ5K2QxV2xzbHgwWTg5eGIxQjQ4b1Q4NnI5d0l5VVoKNStKWE12bXhSaHdROFprZy9Kcjc2RkVUU01BS0RHWDJGYXh3RCtLeU1XSS9JU1JPRTZrbWc1R21yTkVhRTl3PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mcluster_ca_certificate[0m[0m = "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURLekNDQWhPZ0F3SUJBZ0lSQUxSZU40eWpTbUx5b28zZ09vZGpXVTh3RFFZSktvWklodmNOQVFFTEJRQXcKTHpFdE1Dc0dBMVVFQXhNa1lUY3lNRGxrTkRRdE9XVmpaQzAwWWpKbExUbGhOakl0WW1ZMk1UVTVNV0U1T1daaApNQjRYRFRJeE1EZ3dOakEzTURNek9Wb1hEVEkyTURnd05UQTRNRE16T1Zvd0x6RXRNQ3NHQTFVRUF4TWtZVGN5Ck1EbGtORFF0T1dWalpDMDBZakpsTFRsaE5qSXRZbVkyTVRVNU1XRTVPV1poTUlJQklqQU5CZ2txaGtpRzl3MEIKQVFFRkFBT0NBUThBTUlJQkNnS0NBUUVBM2lneEJXeTVVWXhFTVQvYytLazcwWElSMFNKblZjbWVIZUJ0bkFmcgpRR3N6RzBMMFlQeFVEQm4wSU03bjQ1c3NKVGRSRjB3eE52cXNUc2pTeWZ4STlYSzJ3bGVvZmtsL3c3eHNiVnhxCjQ1UWtVTTYvV1M1Ui9OZ3VBcTlUNTM5Y0ZMbHRRTE5IR2gxb0hCaWJTbUdHMWFuU2NrdmRvQUZvbWo0ZXhmVUoKWktqaFhBMzVLdjg5elRjQUdSdmdjeVo1eGxWV1BxVnM5OHU1SmhtVi9zaG1MOHN3TXpOSTBVRXRLSndkckdtagpmeW1nbE5uQTluLy9HU21BRWN4TzFjbUVLQk9MU3hPN3BJSjdUcnNoNE5QTmlJWjdEcm9ZMEh4MUsrVmlUMlB0CitoZVJkdURLT29VcDhnOWxrMlp3SlRsR2dLU0ZZUDY5L0ZNYXpoU0pMM291L3dJREFRQUJvMEl3UURBT0JnTlYKSFE4QkFmOEVCQU1DQWdRd0R3WURWUjBUQVFIL0JBVXdBd0VCL3pBZEJnTlZIUTRFRmdRVUlKN0xMZGtpWGIwYgp4VFY0MTh3ODBPVUh1dFV3RFFZSktvWklodmNOQVFFTEJRQURnZ0VCQUxIT2hINVErTnRyK0F1dlpka0xDd3ZtCmY4VjIwVnhaTldzVEJvY1NJM3ROeUw0SlRuL29LY0hRaUpBUVRRblZHY3FTRmp6amtDQlNSZzgwM2VzV09LK1EKV0hTeDhkY0cvenNaUHdMSjNDMGpONW9aVjk5S21RMzk1N1ZRZXJWZXAyaWNyYlBpQ21mYXF4QXJtY2NESkV3TgowayswSUpoOUhPQWFKeHFHK2tLTHJ6U0g2a1FrVCsyeU1leVJXV2ZsQzVkRFZsZ2g3eFZ3NXpONEg3VE44V2RRCjhScm9FbmdBYmRCYzBnU3JXZDJRL29hRUlrRGxuY1puYi9vZWRPMmlqMDc4MmU2RnM4d1NjVmliWGFlWndWeXcKa0xiSjMwWTQ5U2VCNmxtK1dIcURTSUZRYW1vN0NNSmFvdHc5N0tENzAwKzBuSlUvMFk0QlNvUEY4b3Z2ZTg4PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==" [90m->[0m [0m[90mnull[0m[0m
 
           [31m-[0m [0mclient_certificate_config {
               [31m-[0m [0m[1m[0missue_client_certificate[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
@@ -352,11 +327,11 @@ Terraform will perform the following actions:
       [31m-[0m [0mnode_pool {
           [31m-[0m [0m[1m[0minitial_node_count[0m[0m  = 2 [90m->[0m [0m[90mnull[0m[0m
           [31m-[0m [0m[1m[0minstance_group_urls[0m[0m = [
-              [31m-[0m [0m"https://www.googleapis.com/compute/v1/projects/silver-axon-321114/zones/europe-west1-c/instanceGroupManagers/gke-main-cluster-default-pool-26f55156-grp",
-              [31m-[0m [0m"https://www.googleapis.com/compute/v1/projects/silver-axon-321114/zones/europe-west1-b/instanceGroupManagers/gke-main-cluster-default-pool-1558845d-grp",
-              [31m-[0m [0m"https://www.googleapis.com/compute/v1/projects/silver-axon-321114/zones/europe-west1-d/instanceGroupManagers/gke-main-cluster-default-pool-c1ed99a3-grp",
+              [31m-[0m [0m"https://www.googleapis.com/compute/v1/projects/silver-axon-321114/zones/europe-west1-d/instanceGroupManagers/gke-main-cluster-default-pool-a38be44b-grp",
+              [31m-[0m [0m"https://www.googleapis.com/compute/v1/projects/silver-axon-321114/zones/europe-west1-b/instanceGroupManagers/gke-main-cluster-default-pool-dcafd9a7-grp",
+              [31m-[0m [0m"https://www.googleapis.com/compute/v1/projects/silver-axon-321114/zones/europe-west1-c/instanceGroupManagers/gke-main-cluster-default-pool-3ebcf329-grp",
             ] [90m->[0m [0m[90mnull[0m[0m
-          [31m-[0m [0m[1m[0mmax_pods_per_node[0m[0m   = 110 [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mmax_pods_per_node[0m[0m   = 0 [90m->[0m [0m[90mnull[0m[0m
           [31m-[0m [0m[1m[0mname[0m[0m                = "default-pool" [90m->[0m [0m[90mnull[0m[0m
           [31m-[0m [0m[1m[0mnode_count[0m[0m          = 2 [90m->[0m [0m[90mnull[0m[0m
           [31m-[0m [0m[1m[0mnode_locations[0m[0m      = [
@@ -429,7 +404,7 @@ Terraform will perform the following actions:
 
 [1m  # module.network.google_compute_subnetwork.private[0m will be [1m[31mdestroyed[0m[0m
 [0m  [31m-[0m[0m resource "google_compute_subnetwork" "private" {
-      [31m-[0m [0m[1m[0mcreation_timestamp[0m[0m         = "2021-08-06T00:43:50.310-07:00" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mcreation_timestamp[0m[0m         = "2021-08-06T01:03:17.176-07:00" [90m->[0m [0m[90mnull[0m[0m
       [31m-[0m [0m[1m[0mgateway_address[0m[0m            = "172.19.0.1" [90m->[0m [0m[90mnull[0m[0m
       [31m-[0m [0m[1m[0mid[0m[0m                         = "projects/silver-axon-321114/regions/us-central1/subnetworks/private" [90m->[0m [0m[90mnull[0m[0m
       [31m-[0m [0m[1m[0mip_cidr_range[0m[0m              = "172.19.0.0/24" [90m->[0m [0m[90mnull[0m[0m
@@ -445,7 +420,7 @@ Terraform will perform the following actions:
 
 [1m  # module.network.google_compute_subnetwork.public[0m will be [1m[31mdestroyed[0m[0m
 [0m  [31m-[0m[0m resource "google_compute_subnetwork" "public" {
-      [31m-[0m [0m[1m[0mcreation_timestamp[0m[0m         = "2021-08-06T00:43:50.342-07:00" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mcreation_timestamp[0m[0m         = "2021-08-06T01:03:17.148-07:00" [90m->[0m [0m[90mnull[0m[0m
       [31m-[0m [0m[1m[0mgateway_address[0m[0m            = "172.19.100.1" [90m->[0m [0m[90mnull[0m[0m
       [31m-[0m [0m[1m[0mid[0m[0m                         = "projects/silver-axon-321114/regions/europe-west1/subnetworks/public" [90m->[0m [0m[90mnull[0m[0m
       [31m-[0m [0m[1m[0mip_cidr_range[0m[0m              = "172.19.100.0/24" [90m->[0m [0m[90mnull[0m[0m
@@ -455,22 +430,13 @@ Terraform will perform the following actions:
       [31m-[0m [0m[1m[0mprivate_ipv6_google_access[0m[0m = "DISABLE_GOOGLE_ACCESS" [90m->[0m [0m[90mnull[0m[0m
       [31m-[0m [0m[1m[0mproject[0m[0m                    = "silver-axon-321114" [90m->[0m [0m[90mnull[0m[0m
       [31m-[0m [0m[1m[0mregion[0m[0m                     = "europe-west1" [90m->[0m [0m[90mnull[0m[0m
-      [31m-[0m [0m[1m[0msecondary_ip_range[0m[0m         = [
-          [31m-[0m [0m{
-              [31m-[0m [0mip_cidr_range = "10.96.0.0/20"
-              [31m-[0m [0mrange_name    = "gke-main-cluster-services-6653be4f"
-            },
-          [31m-[0m [0m{
-              [31m-[0m [0mip_cidr_range = "10.92.0.0/14"
-              [31m-[0m [0mrange_name    = "gke-main-cluster-pods-6653be4f"
-            },
-        ] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msecondary_ip_range[0m[0m         = [] [90m->[0m [0m[90mnull[0m[0m
       [31m-[0m [0m[1m[0mself_link[0m[0m                  = "https://www.googleapis.com/compute/v1/projects/silver-axon-321114/regions/europe-west1/subnetworks/public" [90m->[0m [0m[90mnull[0m[0m
     }
 
 [1m  # module.security.google_compute_firewall.all-vpc-fw[0m will be [1m[31mdestroyed[0m[0m
 [0m  [31m-[0m[0m resource "google_compute_firewall" "all-vpc-fw" {
-      [31m-[0m [0m[1m[0mcreation_timestamp[0m[0m      = "2021-08-06T00:43:49.983-07:00" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mcreation_timestamp[0m[0m      = "2021-08-06T01:03:16.880-07:00" [90m->[0m [0m[90mnull[0m[0m
       [31m-[0m [0m[1m[0mdestination_ranges[0m[0m      = [] [90m->[0m [0m[90mnull[0m[0m
       [31m-[0m [0m[1m[0mdirection[0m[0m               = "INGRESS" [90m->[0m [0m[90mnull[0m[0m
       [31m-[0m [0m[1m[0mdisabled[0m[0m                = false [90m->[0m [0m[90mnull[0m[0m
@@ -500,7 +466,7 @@ Terraform will perform the following actions:
 
 [1m  # module.security.google_project_iam_member.compute-admin-membership[0m will be [1m[31mdestroyed[0m[0m
 [0m  [31m-[0m[0m resource "google_project_iam_member" "compute-admin-membership" {
-      [31m-[0m [0m[1m[0metag[0m[0m    = "BwXI3zFOh1w=" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0metag[0m[0m    = "BwXI33bklGk=" [90m->[0m [0m[90mnull[0m[0m
       [31m-[0m [0m[1m[0mid[0m[0m      = "silver-axon-321114/roles/compute.instanceAdmin.v1/serviceAccount:computeadmin@silver-axon-321114.iam.gserviceaccount.com" [90m->[0m [0m[90mnull[0m[0m
       [31m-[0m [0m[1m[0mmember[0m[0m  = "serviceAccount:computeadmin@silver-axon-321114.iam.gserviceaccount.com" [90m->[0m [0m[90mnull[0m[0m
       [31m-[0m [0m[1m[0mproject[0m[0m = "silver-axon-321114" [90m->[0m [0m[90mnull[0m[0m
@@ -515,7 +481,7 @@ Terraform will perform the following actions:
       [31m-[0m [0m[1m[0mid[0m[0m           = "projects/silver-axon-321114/serviceAccounts/computeadmin@silver-axon-321114.iam.gserviceaccount.com" [90m->[0m [0m[90mnull[0m[0m
       [31m-[0m [0m[1m[0mname[0m[0m         = "projects/silver-axon-321114/serviceAccounts/computeadmin@silver-axon-321114.iam.gserviceaccount.com" [90m->[0m [0m[90mnull[0m[0m
       [31m-[0m [0m[1m[0mproject[0m[0m      = "silver-axon-321114" [90m->[0m [0m[90mnull[0m[0m
-      [31m-[0m [0m[1m[0munique_id[0m[0m    = "109022248355142501228" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0munique_id[0m[0m    = "111656482365155745941" [90m->[0m [0m[90mnull[0m[0m
     }
 
 [1m  # module.storage.google_sql_database.app_db[0m will be [1m[31mdestroyed[0m[0m
@@ -533,7 +499,7 @@ Terraform will perform the following actions:
 [0m  [31m-[0m[0m resource "google_sql_database_instance" "db_instance" {
       [31m-[0m [0m[1m[0mconnection_name[0m[0m               = "silver-axon-321114:us-central1:main-db" [90m->[0m [0m[90mnull[0m[0m
       [31m-[0m [0m[1m[0mdatabase_version[0m[0m              = "MYSQL_5_6" [90m->[0m [0m[90mnull[0m[0m
-      [31m-[0m [0m[1m[0mdeletion_protection[0m[0m           = true [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mdeletion_protection[0m[0m           = false [90m->[0m [0m[90mnull[0m[0m
       [31m-[0m [0m[1m[0mfirst_ip_address[0m[0m              = "34.123.84.36" [90m->[0m [0m[90mnull[0m[0m
       [31m-[0m [0m[1m[0mid[0m[0m                            = "main-db" [90m->[0m [0m[90mnull[0m[0m
       [31m-[0m [0m[1m[0mip_address[0m[0m                    = [
@@ -594,7 +560,7 @@ Terraform will perform the following actions:
           [31m-[0m [0m[1m[0mreplication_type[0m[0m            = "SYNCHRONOUS" [90m->[0m [0m[90mnull[0m[0m
           [31m-[0m [0m[1m[0mtier[0m[0m                        = "db-f1-micro" [90m->[0m [0m[90mnull[0m[0m
           [31m-[0m [0m[1m[0muser_labels[0m[0m                 = {} [90m->[0m [0m[90mnull[0m[0m
-          [31m-[0m [0m[1m[0mversion[0m[0m                     = 1 [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mversion[0m[0m                     = 2 [90m->[0m [0m[90mnull[0m[0m
 
           [31m-[0m [0mbackup_configuration {
               [31m-[0m [0m[1m[0mbinary_log_enabled[0m[0m             = false [90m->[0m [0m[90mnull[0m[0m
@@ -641,47 +607,60 @@ Terraform will perform the following actions:
 [0m[0m[1mmodule.storage.google_sql_database.app_db: Destroying... [id=projects/silver-axon-321114/instances/main-db/databases/application-database][0m[0m
 [0m[1mmodule.security.google_compute_firewall.all-vpc-fw: Destroying... [id=projects/silver-axon-321114/global/firewalls/all-vpc-fw][0m[0m
 [0m[1mmodule.compute.google_compute_instance.private: Destroying... [id=projects/silver-axon-321114/zones/us-central1-b/instances/private][0m[0m
-[0m[1mmodule.security.google_project_iam_member.compute-admin-membership: Destroying... [id=silver-axon-321114/roles/compute.instanceAdmin.v1/serviceAccount:computeadmin@silver-axon-321114.iam.gserviceaccount.com][0m[0m
 [0m[1mmodule.storage.google_storage_bucket.main_bucket: Destroying... [id=marco-rezkallah-main-bucket][0m[0m
-[0m[1mmodule.k8s.google_container_cluster.main_cluster: Destroying... [id=projects/silver-axon-321114/locations/europe-west1/clusters/main-cluster][0m[0m
 [0m[1mmodule.compute.google_compute_instance.public: Destroying... [id=projects/silver-axon-321114/zones/europe-west1-b/instances/public][0m[0m
+[0m[1mmodule.security.google_project_iam_member.compute-admin-membership: Destroying... [id=silver-axon-321114/roles/compute.instanceAdmin.v1/serviceAccount:computeadmin@silver-axon-321114.iam.gserviceaccount.com][0m[0m
+[0m[1mmodule.k8s.google_container_cluster.main_cluster: Destroying... [id=projects/silver-axon-321114/locations/europe-west1/clusters/main-cluster][0m[0m
 [0m[1mmodule.storage.google_storage_bucket.main_bucket: Destruction complete after 1s[0m
-[0m[1mmodule.storage.google_sql_database.app_db: Destruction complete after 4s[0m
+[0m[1mmodule.storage.google_sql_database.app_db: Destruction complete after 2s[0m
 [0m[1mmodule.storage.google_sql_database_instance.db_instance: Destroying... [id=main-db][0m[0m
 [0m[1mmodule.security.google_project_iam_member.compute-admin-membership: Destruction complete after 9s[0m
 [0m[1mmodule.security.google_service_account.compute-admin: Destroying... [id=projects/silver-axon-321114/serviceAccounts/computeadmin@silver-axon-321114.iam.gserviceaccount.com][0m[0m
 [0m[1mmodule.security.google_compute_firewall.all-vpc-fw: Still destroying... [id=projects/silver-axon-321114/global/firewalls/all-vpc-fw, 10s elapsed][0m[0m
 [0m[1mmodule.compute.google_compute_instance.private: Still destroying... [id=projects/silver-axon-321114/zones/us-central1-b/instances/private, 10s elapsed][0m[0m
-[0m[1mmodule.k8s.google_container_cluster.main_cluster: Still destroying... [id=projects/silver-axon-321114/locations/europe-west1/clusters/main-cluster, 10s elapsed][0m[0m
 [0m[1mmodule.compute.google_compute_instance.public: Still destroying... [id=projects/silver-axon-321114/zones/europe-west1-b/instances/public, 10s elapsed][0m[0m
+[0m[1mmodule.k8s.google_container_cluster.main_cluster: Still destroying... [id=projects/silver-axon-321114/locations/europe-west1/clusters/main-cluster, 10s elapsed][0m[0m
 [0m[1mmodule.security.google_service_account.compute-admin: Destruction complete after 1s[0m
 [0m[1mmodule.security.google_compute_firewall.all-vpc-fw: Destruction complete after 12s[0m
+[0m[1mmodule.storage.google_sql_database_instance.db_instance: Still destroying... [id=main-db, 10s elapsed][0m[0m
 [0m[1mmodule.compute.google_compute_instance.private: Still destroying... [id=projects/silver-axon-321114/zones/us-central1-b/instances/private, 20s elapsed][0m[0m
-[0m[1mmodule.k8s.google_container_cluster.main_cluster: Still destroying... [id=projects/silver-axon-321114/locations/europe-west1/clusters/main-cluster, 20s elapsed][0m[0m
 [0m[1mmodule.compute.google_compute_instance.public: Still destroying... [id=projects/silver-axon-321114/zones/europe-west1-b/instances/public, 20s elapsed][0m[0m
+[0m[1mmodule.k8s.google_container_cluster.main_cluster: Still destroying... [id=projects/silver-axon-321114/locations/europe-west1/clusters/main-cluster, 20s elapsed][0m[0m
 [0m[1mmodule.compute.google_compute_instance.public: Destruction complete after 22s[0m
-[0m[1mmodule.compute.google_compute_instance.private: Destruction complete after 22s[0m
-[0m[1mmodule.network.google_compute_subnetwork.private: Destroying... [id=projects/silver-axon-321114/regions/us-central1/subnetworks/private][0m[0m
+[0m[1mmodule.storage.google_sql_database_instance.db_instance: Still destroying... [id=main-db, 20s elapsed][0m[0m
+[0m[1mmodule.compute.google_compute_instance.private: Still destroying... [id=projects/silver-axon-321114/zones/us-central1-b/instances/private, 30s elapsed][0m[0m
 [0m[1mmodule.k8s.google_container_cluster.main_cluster: Still destroying... [id=projects/silver-axon-321114/locations/europe-west1/clusters/main-cluster, 30s elapsed][0m[0m
-[0m[1mmodule.network.google_compute_subnetwork.private: Still destroying... [id=projects/silver-axon-321114/regions/us-central1/subnetworks/private, 10s elapsed][0m[0m
+[0m[1mmodule.storage.google_sql_database_instance.db_instance: Still destroying... [id=main-db, 30s elapsed][0m[0m
+[0m[1mmodule.compute.google_compute_instance.private: Still destroying... [id=projects/silver-axon-321114/zones/us-central1-b/instances/private, 40s elapsed][0m[0m
 [0m[1mmodule.k8s.google_container_cluster.main_cluster: Still destroying... [id=projects/silver-axon-321114/locations/europe-west1/clusters/main-cluster, 40s elapsed][0m[0m
+[0m[1mmodule.storage.google_sql_database_instance.db_instance: Still destroying... [id=main-db, 40s elapsed][0m[0m
+[0m[1mmodule.compute.google_compute_instance.private: Still destroying... [id=projects/silver-axon-321114/zones/us-central1-b/instances/private, 50s elapsed][0m[0m
+[0m[1mmodule.k8s.google_container_cluster.main_cluster: Still destroying... [id=projects/silver-axon-321114/locations/europe-west1/clusters/main-cluster, 50s elapsed][0m[0m
+[0m[1mmodule.storage.google_sql_database_instance.db_instance: Still destroying... [id=main-db, 50s elapsed][0m[0m
+[0m[1mmodule.compute.google_compute_instance.private: Still destroying... [id=projects/silver-axon-321114/zones/us-central1-b/instances/private, 1m0s elapsed][0m[0m
+[0m[1mmodule.k8s.google_container_cluster.main_cluster: Still destroying... [id=projects/silver-axon-321114/locations/europe-west1/clusters/main-cluster, 1m0s elapsed][0m[0m
+[0m[1mmodule.storage.google_sql_database_instance.db_instance: Still destroying... [id=main-db, 1m0s elapsed][0m[0m
+[0m[1mmodule.storage.google_sql_database_instance.db_instance: Destruction complete after 1m6s[0m
+[0m[1mmodule.compute.google_compute_instance.private: Still destroying... [id=projects/silver-axon-321114/zones/us-central1-b/instances/private, 1m10s elapsed][0m[0m
+[0m[1mmodule.k8s.google_container_cluster.main_cluster: Still destroying... [id=projects/silver-axon-321114/locations/europe-west1/clusters/main-cluster, 1m10s elapsed][0m[0m
+[0m[1mmodule.compute.google_compute_instance.private: Still destroying... [id=projects/silver-axon-321114/zones/us-central1-b/instances/private, 1m20s elapsed][0m[0m
+[0m[1mmodule.k8s.google_container_cluster.main_cluster: Still destroying... [id=projects/silver-axon-321114/locations/europe-west1/clusters/main-cluster, 1m20s elapsed][0m[0m
+[0m[1mmodule.compute.google_compute_instance.private: Still destroying... [id=projects/silver-axon-321114/zones/us-central1-b/instances/private, 1m30s elapsed][0m[0m
+[0m[1mmodule.k8s.google_container_cluster.main_cluster: Still destroying... [id=projects/silver-axon-321114/locations/europe-west1/clusters/main-cluster, 1m30s elapsed][0m[0m
+[0m[1mmodule.compute.google_compute_instance.private: Still destroying... [id=projects/silver-axon-321114/zones/us-central1-b/instances/private, 1m40s elapsed][0m[0m
+[0m[1mmodule.k8s.google_container_cluster.main_cluster: Still destroying... [id=projects/silver-axon-321114/locations/europe-west1/clusters/main-cluster, 1m40s elapsed][0m[0m
+[0m[1mmodule.compute.google_compute_instance.private: Still destroying... [id=projects/silver-axon-321114/zones/us-central1-b/instances/private, 1m50s elapsed][0m[0m
+[0m[1mmodule.k8s.google_container_cluster.main_cluster: Still destroying... [id=projects/silver-axon-321114/locations/europe-west1/clusters/main-cluster, 1m50s elapsed][0m[0m
+[0m[1mmodule.compute.google_compute_instance.private: Destruction complete after 1m55s[0m
+[0m[1mmodule.network.google_compute_subnetwork.private: Destroying... [id=projects/silver-axon-321114/regions/us-central1/subnetworks/private][0m[0m
+[0m[1mmodule.k8s.google_container_cluster.main_cluster: Still destroying... [id=projects/silver-axon-321114/locations/europe-west1/clusters/main-cluster, 2m0s elapsed][0m[0m
+[0m[1mmodule.network.google_compute_subnetwork.private: Still destroying... [id=projects/silver-axon-321114/regions/us-central1/subnetworks/private, 10s elapsed][0m[0m
+[0m[1mmodule.k8s.google_container_cluster.main_cluster: Still destroying... [id=projects/silver-axon-321114/locations/europe-west1/clusters/main-cluster, 2m10s elapsed][0m[0m
 [0m[1mmodule.network.google_compute_subnetwork.private: Still destroying... [id=projects/silver-axon-321114/regions/us-central1/subnetworks/private, 20s elapsed][0m[0m
 [0m[1mmodule.network.google_compute_subnetwork.private: Destruction complete after 22s[0m
-[0m[1mmodule.k8s.google_container_cluster.main_cluster: Still destroying... [id=projects/silver-axon-321114/locations/europe-west1/clusters/main-cluster, 50s elapsed][0m[0m
-[0m[1mmodule.k8s.google_container_cluster.main_cluster: Still destroying... [id=projects/silver-axon-321114/locations/europe-west1/clusters/main-cluster, 1m0s elapsed][0m[0m
-[0m[1mmodule.k8s.google_container_cluster.main_cluster: Still destroying... [id=projects/silver-axon-321114/locations/europe-west1/clusters/main-cluster, 1m10s elapsed][0m[0m
-[0m[1mmodule.k8s.google_container_cluster.main_cluster: Still destroying... [id=projects/silver-axon-321114/locations/europe-west1/clusters/main-cluster, 1m20s elapsed][0m[0m
-[0m[1mmodule.k8s.google_container_cluster.main_cluster: Still destroying... [id=projects/silver-axon-321114/locations/europe-west1/clusters/main-cluster, 1m30s elapsed][0m[0m
-[0m[1mmodule.k8s.google_container_cluster.main_cluster: Still destroying... [id=projects/silver-axon-321114/locations/europe-west1/clusters/main-cluster, 1m40s elapsed][0m[0m
-[0m[1mmodule.k8s.google_container_cluster.main_cluster: Still destroying... [id=projects/silver-axon-321114/locations/europe-west1/clusters/main-cluster, 1m50s elapsed][0m[0m
-[0m[1mmodule.k8s.google_container_cluster.main_cluster: Still destroying... [id=projects/silver-axon-321114/locations/europe-west1/clusters/main-cluster, 2m0s elapsed][0m[0m
-[0m[1mmodule.k8s.google_container_cluster.main_cluster: Still destroying... [id=projects/silver-axon-321114/locations/europe-west1/clusters/main-cluster, 2m10s elapsed][0m[0m
 [0m[1mmodule.k8s.google_container_cluster.main_cluster: Still destroying... [id=projects/silver-axon-321114/locations/europe-west1/clusters/main-cluster, 2m20s elapsed][0m[0m
 [0m[1mmodule.k8s.google_container_cluster.main_cluster: Still destroying... [id=projects/silver-axon-321114/locations/europe-west1/clusters/main-cluster, 2m30s elapsed][0m[0m
-[0m[1mmodule.k8s.google_container_cluster.main_cluster: Still destroying... [id=projects/silver-axon-321114/locations/europe-west1/clusters/main-cluster, 2m40s elapsed][0m[0m
-[0m[1mmodule.k8s.google_container_cluster.main_cluster: Still destroying... [id=projects/silver-axon-321114/locations/europe-west1/clusters/main-cluster, 2m50s elapsed][0m[0m
-[0m[1mmodule.k8s.google_container_cluster.main_cluster: Still destroying... [id=projects/silver-axon-321114/locations/europe-west1/clusters/main-cluster, 3m0s elapsed][0m[0m
-[0m[1mmodule.k8s.google_container_cluster.main_cluster: Destruction complete after 3m3s[0m
+[0m[1mmodule.k8s.google_container_cluster.main_cluster: Destruction complete after 2m33s[0m
 [0m[1mmodule.network.google_compute_subnetwork.public: Destroying... [id=projects/silver-axon-321114/regions/europe-west1/subnetworks/public][0m[0m
 [0m[1mmodule.network.google_compute_subnetwork.public: Still destroying... [id=projects/silver-axon-321114/regions/europe-west1/subnetworks/public, 10s elapsed][0m[0m
 [0m[1mmodule.network.google_compute_subnetwork.public: Still destroying... [id=projects/silver-axon-321114/regions/europe-west1/subnetworks/public, 20s elapsed][0m[0m
@@ -689,9 +668,7 @@ Terraform will perform the following actions:
 [0m[1mmodule.network.google_compute_network.vpc_network: Destroying... [id=projects/silver-axon-321114/global/networks/vpc-network][0m[0m
 [0m[1mmodule.network.google_compute_network.vpc_network: Still destroying... [id=projects/silver-axon-321114/global/networks/vpc-network, 10s elapsed][0m[0m
 [0m[1mmodule.network.google_compute_network.vpc_network: Still destroying... [id=projects/silver-axon-321114/global/networks/vpc-network, 20s elapsed][0m[0m
-[0m[1mmodule.network.google_compute_network.vpc_network: Destruction complete after 22s[0m
-[31m╷[0m[0m
-[31m│[0m [0m[1m[31mError: [0m[0m[1mError, failed to delete instance because deletion_protection is set to true. Set it to false to proceed with instance deletion[0m
-[31m│[0m [0m
-[31m│[0m [0m[0m
-[31m╵[0m[0m
+[0m[1mmodule.network.google_compute_network.vpc_network: Destruction complete after 21s[0m
+[0m[1m[32m
+Destroy complete! Resources: 12 destroyed.
+[0m

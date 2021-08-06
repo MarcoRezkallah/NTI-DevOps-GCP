@@ -457,7 +457,7 @@ Terraform will perform the following actions:
 [0m  [32m+[0m[0m resource "google_sql_database_instance" "db_instance" {
       [32m+[0m [0m[1m[0mconnection_name[0m[0m               = (known after apply)
       [32m+[0m [0m[1m[0mdatabase_version[0m[0m              = "MYSQL_5_6"
-      [32m+[0m [0m[1m[0mdeletion_protection[0m[0m           = true
+      [32m+[0m [0m[1m[0mdeletion_protection[0m[0m           = false
       [32m+[0m [0m[1m[0mfirst_ip_address[0m[0m              = (known after apply)
       [32m+[0m [0m[1m[0mid[0m[0m                            = (known after apply)
       [32m+[0m [0m[1m[0mip_address[0m[0m                    = (known after apply)
