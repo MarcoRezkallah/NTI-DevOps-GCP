@@ -1,6 +1,6 @@
 resource "google_storage_bucket" "main_bucket" {
-  name          = "main-bucket"
-  location      = "EU"
+  name     = var.main_bucket_name
+  location = "EU"
 
   uniform_bucket_level_access = true
 }

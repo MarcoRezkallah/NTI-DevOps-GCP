@@ -16,15 +16,16 @@ module "k8s" {
   network_id    = module.network.vpc_network.id
   subnetwork_id = module.network.public_subnet.id
   region        = module.network.public_subnet.region
-  vpc_tag               = var.vpc_tag
+  vpc_tag       = var.vpc_tag
 }
 
 module "security" {
   source     = "./modules/security"
   network_id = module.network.vpc_network.id
-  vpc_tag               = var.vpc_tag
+  vpc_tag    = var.vpc_tag
 }
 
 module "storage" {
-  source = "./modules/storage"
+  source           = "./modules/storage"
+  main_bucket_name = var.main_bucket_name
 }
