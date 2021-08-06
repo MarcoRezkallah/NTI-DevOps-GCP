@@ -10,9 +10,7 @@ resource "google_compute_instance" "public" {
     }
 
   }
-
-  tags = ["vpc_network"]
-
+  tags = [var.vpc_tag]
   network_interface {
     subnetwork = var.public_subnet_id
 

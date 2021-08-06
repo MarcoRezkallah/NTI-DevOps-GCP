@@ -8,7 +8,7 @@ resource "google_container_cluster" "main_cluster" {
   node_config {
     disk_size_gb = 20
     machine_type = "e2-medium"
-    tags         = ["vpc_network"]
+    tags         = [var.vpc_tag]
   }
 
   timeouts {

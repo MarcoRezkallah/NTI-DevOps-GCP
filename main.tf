@@ -8,6 +8,7 @@ module "compute" {
   private_subnet_id     = module.network.private_subnet.id
   public_subnet_region  = module.network.public_subnet.region
   private_subnet_region = module.network.private_subnet.region
+  vpc_tag               = var.vpc_tag
 }
 
 module "k8s" {
@@ -15,12 +16,13 @@ module "k8s" {
   network_id    = module.network.vpc_network.id
   subnetwork_id = module.network.public_subnet.id
   region        = module.network.public_subnet.region
-
+  vpc_tag               = var.vpc_tag
 }
 
 module "security" {
   source     = "./modules/security"
   network_id = module.network.vpc_network.id
+  vpc_tag               = var.vpc_tag
 }
 
 module "storage" {
