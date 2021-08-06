@@ -6,10 +6,12 @@ resource "google_compute_instance" "public" {
     initialize_params {
       image = "ubuntu-2004-lts"
       type  = "pd-standard"
-      size = 10
+      size  = 10
     }
 
   }
+
+  tags = ["vpc_network"]
 
   network_interface {
     subnetwork = var.public_subnet_id

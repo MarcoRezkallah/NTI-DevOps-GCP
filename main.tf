@@ -17,3 +17,8 @@ module "k8s" {
   region        = module.network.public_subnet.region
 
 }
+
+module "security" {
+  source     = "./modules/security"
+  network_id = module.network.vpc_network.id
+}
