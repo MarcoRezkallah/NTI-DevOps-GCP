@@ -22,3 +22,7 @@ module "security" {
   source     = "./modules/security"
   network_id = module.network.vpc_network.id
 }
+
+module "storage" {
+  source = "./modules/storage"
+}
